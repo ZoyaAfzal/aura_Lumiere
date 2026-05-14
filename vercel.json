@@ -1,6 +1,10 @@
 {
+  "build": {
+    "env": {
+      "OUTPUT_DIRECTORY": "dist/client"
+    }
+  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/client/$1" },
-    { "source": "/client/(.*)", "destination": "/client/$1" }
+    { "source": "/(.*)", "destination": "/dist/client/$1" }
   ]
 }
