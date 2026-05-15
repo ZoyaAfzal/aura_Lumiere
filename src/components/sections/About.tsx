@@ -49,12 +49,12 @@ export function About() {
           <p className="mt-8 text-muted-foreground leading-relaxed">
             Founded as a quiet rebellion against the clinical and the cookie-cutter, Aura Lumière
             brings the precision of medical-grade aesthetics into a sanctuary built for the senses.
-            Our specialists are clinicians and artisans both — guiding each guest through rituals
+            Our specialists are clinicians and artisans both are guiding each guest through rituals
             that honor both the science of skin and the slowness of true rest.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
             Every candle, every consultation, every protocol is composed with intention. This is
-            beauty as a practice — never a transaction.
+            beauty as a practice, never a transaction.
           </p>
 
           <a
