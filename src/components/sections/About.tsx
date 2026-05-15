@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowRight, Leaf } from "lucide-react";
 import a1 from "@/assets/about1.jpg";
 import a2 from "@/assets/about2.jpg";
+import a3 from "@/assets/spa7.jpg";
+import a4 from "@/assets/spa8.jpg";
 
 export function About() {
   return (
@@ -13,19 +15,25 @@ export function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
-          className="relative h-[560px]"
+          className="relative h-[600px]"
         >
-          <div className="absolute top-0 left-0 w-3/4 h-[420px] rounded-3xl overflow-hidden shadow-2xl">
-            <img src={a2} alt="Aura Lumière reception" loading="lazy" className="size-full object-cover" />
+          <div className="absolute top-0 left-0 w-[65%] h-[380px] rounded-3xl overflow-hidden shadow-2xl z-0">
+            <img src={a2} alt="Aura Lumière sanctuary" loading="lazy" className="size-full object-cover" />
           </div>
-          <div className="absolute bottom-0 right-0 w-3/5 h-[340px] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-cream">
-            <img src={a1} alt="Founder portrait" loading="lazy" className="size-full object-cover" />
+          
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[320px] rounded-3xl overflow-hidden shadow-2xl z-20 ring-4 ring-cream">
+            <img src={a3} alt="Choosing the right skincare" loading="lazy" className="size-full object-cover" />
           </div>
-          <div className="absolute -top-6 -right-2 size-28 rounded-full bg-cream flex flex-col items-center justify-center text-rose-gold shadow-xl">
+
+          <div className="absolute bottom-0 right-0 w-[55%] h-[300px] rounded-3xl overflow-hidden shadow-2xl z-10 ring-4 ring-cream">
+            <img src={a4} alt="Professional ritual" loading="lazy" className="size-full object-cover" />
+          </div>
+
+          <div className="absolute -top-6 -right-2 size-28 rounded-full bg-cream flex flex-col items-center justify-center text-rose-gold shadow-xl z-30">
             <span className="font-display italic text-3xl leading-none">Est.</span>
             <span className="font-display text-2xl">2009</span>
           </div>
-          <Leaf className="sway absolute bottom-10 left-4 size-14 text-sage" strokeWidth={1} />
+          <Leaf className="sway absolute bottom-10 left-4 size-14 text-sage z-30" strokeWidth={1} />
         </motion.div>
 
         <motion.div

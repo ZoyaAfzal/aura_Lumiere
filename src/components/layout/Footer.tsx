@@ -53,7 +53,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-cream/10">
-        <div className="mx-auto max-w-7xl px-6 md:px-10 py-6 flex flex-wrap items-center justify-between gap-4 text-xs text-cream/50">
+        <div className="mx-auto max-w-7xl px-6 md:px-10 py-6 flex flex-wrap items-center justify-end gap-4 text-xs text-cream/50">
           <span>
             powered by{" "}
             <a
@@ -65,7 +65,6 @@ export function Footer() {
               AxisTechGroup
             </a>
           </span>
-          <span className="font-display italic">Where Science Meets Serenity</span>
         </div>
       </div>
     </footer>

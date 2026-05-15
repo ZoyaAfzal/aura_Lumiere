@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
+import { useNavigate } from "@tanstack/react-router";
 import p1 from "@/assets/product1.jpg";
 import p2 from "@/assets/product2.jpg";
 import p3 from "@/assets/product3.jpg";
@@ -22,6 +23,7 @@ export function Products() {
     [Autoplay({ delay: 4000, stopOnInteraction: false })]
   );
   const [, setIdx] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -71,7 +73,10 @@ export function Products() {
                   <span className="absolute top-4 left-4 px-3 py-1 bg-champagne text-deep-plum text-[10px] uppercase tracking-[0.25em] rounded-full">
                     Sale
                   </span>
-                  <button className="absolute bottom-4 left-4 right-4 py-3 bg-deep-plum text-cream text-xs uppercase tracking-[0.25em] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                  <button 
+                    onClick={() => navigate({ to: "/cart" })}
+                    className="absolute bottom-4 left-4 right-4 py-3 bg-deep-plum text-cream text-xs uppercase tracking-[0.25em] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0"
+                  >
                     Add to Cart
                   </button>
                 </div>

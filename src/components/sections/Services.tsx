@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import spa1 from "@/assets/spa1.jpg";
 import spa2 from "@/assets/spa2.jpg";
 import spa3 from "@/assets/spa3.jpg";
@@ -7,12 +8,12 @@ import spa5 from "@/assets/spa5.jpg";
 import spa6 from "@/assets/spa6.jpg";
 
 const services = [
-  { img: spa6, name: "Salt Therapy", tag: "Breathe in pink Himalayan calm" },
-  { img: spa3, name: "Geothermal Stone", tag: "Heat that melts every tension" },
-  { img: spa5, name: "Hair Spa & Scalp", tag: "Renewal from root to ribbon" },
-  { img: spa1, name: "Backbone & Spinal", tag: "Realign. Restore. Rise" },
-  { img: spa4, name: "Aroma & Essence", tag: "Botanical alchemy in bloom" },
-  { img: spa2, name: "Advanced Facials", tag: "Light-led skin reverence" },
+  { id: "salt-therapy", img: spa6, name: "Salt Therapy", tag: "Breathe in pink Himalayan calm" },
+  { id: "geothermal-stone", img: spa3, name: "Geothermal Stone", tag: "Heat that melts every tension" },
+  { id: "hair-spa", img: spa5, name: "Hair Spa & Scalp", tag: "Renewal from root to ribbon" },
+  { id: "spinal-alignment", img: spa1, name: "Backbone & Spinal", tag: "Realign. Restore. Rise" },
+  { id: "aroma-essence", img: spa4, name: "Aroma & Essence", tag: "Botanical alchemy in bloom" },
+  { id: "advanced-facials", img: spa2, name: "Advanced Facials", tag: "Light-led skin reverence" },
 ];
 
 export function Services() {
@@ -51,12 +52,13 @@ export function Services() {
               </div>
               <h3 className="font-display text-2xl text-deep-plum">{s.name}</h3>
               <p className="mt-3 text-rose-gold italic font-display text-lg">{s.tag}</p>
-              <a
-                href="#contact"
+              <Link
+                to="/treatment/$id"
+                params={{ id: s.id }}
                 className="mt-6 inline-block text-xs uppercase tracking-[0.3em] text-deep-plum/70 story-link"
               >
                 Discover →
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
